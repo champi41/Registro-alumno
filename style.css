@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    font-family: "Inter", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    color: white;
+}
+:root{
+    --color-azul: #ffffff;
+    --color-blanco: white;
+
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;
+}   
+form{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(17, 17, 17);
+    padding: 20px;
+    gap: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 3px 7px rgba(255, 255, 255, 0.5);
+}
+form h1{
+    text-align: center;
+}
+label, p{
+    font-weight: bold;
+}
+
+
+input:invalid:not(:focus){
+    border: 1px solid red;
+}
+.idalumno{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+.idalumno input{
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 2px rgb(0, 0, 0);
+    background-color: black;
+}
+input:valid{
+    border: 1px solid green;
+}
+input:focus-visible{
+    outline: none;
+    border: solid 1px rgb(255, 255, 255);
+
+}
+.idacademico {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.carrera{
+    display: flex;
+    gap: 10px;
+}
+.sede{
+    display: flex;
+    gap: 10px;
+}
+select{
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgb(0, 0, 0);
+}
+.jornadaRadio{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.jornadaRadio label{
+    font-size: 15px;
+    font-weight: 400;
+    border: solid 1px rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.jornadaRadio label[for="diurna"]:hover{
+    box-shadow: 0px 0px 20px rgb(255, 255, 92);
+    background-color: rgb(0, 132, 255);
+    color: rgb(255, 255, 255);   
+    transition: all 0.3s ease;
+}
+.jornadaRadio label[for="vespertina"]:hover{
+    box-shadow: 0px 0px 20px rgb(255, 136, 0);
+    background-color: rgb(0, 65, 102);
+    color: rgb(255, 255, 255);   
+    transition: all 0.3s ease;
+}
+.jornadaRadio input{
+    display: none;
+}
+.jornadaRadio input[type="radio"]:checked + label[for="vespertina"]{
+    box-shadow: 0px 0px 20px rgb(255, 136, 0);
+    background-color: rgb(0, 65, 102);
+    color: rgb(255, 255, 255);   
+    transition: all 0.3s ease;
+}
+.jornadaRadio input[type="radio"]:checked + label[for="diurna"]{
+    box-shadow: 0px 0px 20px rgb(255, 255, 92);
+    background-color: rgb(0, 132, 255);
+    color: rgb(255, 255, 255);   
+    transition: all 0.3s ease;
+}
+.terminos input{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.botones button{
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100px;
+}
+.reset {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+    box-shadow:  0px 2px 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+    
+}
+.reset:hover{
+    border: 1px solid rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 4px rgb(0, 0, 0);
+    transition: all 0.3s ease;
+}
+.submit{
+    border: none;
+    color: var(--color-azul);
+    box-shadow:  0px 2px 3px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+.submit:hover{
+    box-shadow: 0px 2px 4px black;
+    transition: all 0.3s ease;
+}

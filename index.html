@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regsitro de alumno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form action="done.html" method="get">
+
+        <h1>Registro de alumno</h1>
+
+        <div class="idalumno">
+            
+            <label for="nombre">Nombre completo:</label>
+            <input 
+                type="text"
+                required
+                autocomplete="name">
+            <label for="rut">RUT:</label>
+            <input
+                placeholder="12.345.678-9"
+                type="text"
+                required
+                inputmode="numeric">
+            <label for="correo">Correo:</label>
+            <input 
+                placeholder="correo@email.ej"
+                type="email"
+                required
+                autocomplete="email">
+            <label for="telefono">Numero de telefono:</label>
+            <input 
+            placeholder="987654321"
+            type="tel" 
+            autocomplete="tel"
+            required>
+        </div> 
+
+        <div class="idacademico">
+            <div class="carrera">
+                <label for="carrera">Carrera:</label>
+                <select name="carrera" id="carrera">
+                    <option value="">Ingenieria Civil en Informatica</option>
+                    <option value="">Ingenieria Civil Electrica</option>
+                    <option value="">Ingenieria Civil Industrial</option>
+                    <option value="">Ingenieria Civil</option>
+                </select>
+            </div>
+
+            <div class="jornadaRadio">
+
+                <p>Jornada:</p>
+                <input type="radio" name="jornada" id="diurna" value="diurna">
+                <label for="diurna">Diurna</label>
+                <input type="radio" name="jornada" id="vespertina" value="vespertina">
+                <label for="vespertina">Vespertina</label>
+
+            </div>
+
+            <div class="sede">
+                <label for="sede">Sede:</label>
+                <select name="sede" id="sede">
+                    <option value="">Osorno</option>
+                    <option value="">Puerto Montt</option>
+                    <option value="">Castro</option>
+                </select>
+            </div>
+        </div>
+        <div class="terminos">
+            <input type="checkbox" name="terminos" id="terminos">
+            <label for="terminos">Acepto los terminos y condiciones.</label>
+        </div>
+        <div class="botones">
+            <button type="reset" class="reset">Limpiar</button>
+            <button type="submit" class="submit">Enviar</button>
+        </div>
+    </form>
+
+</body>
+</html>
